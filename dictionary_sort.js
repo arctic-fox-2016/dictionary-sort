@@ -26,8 +26,8 @@ function dictionary_sort() {
 
 
   }
-  console.log("congratulation you have "+ dictionary.length-1+
-  " new words in your dictionary :\n"+dictionary.join("\n"));
+  console.log("congratulation you have "+ dictionary.length+ " new words in your dictionary :\n"+dictionary.join("\n"));
+  alert("congratulation you have "+ dictionary.length+ " new words in your dictionary :\n"+dictionary.join("\n"));
 }
 
 //
