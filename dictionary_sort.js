@@ -19,12 +19,16 @@ function cetakHasil(word) {
 }
 function dictionary_sort(arr) {
   // Your code here to sort the array
-  return arr.sort(insensitive);
-}
+  var len = arr.length;
+  for (var i = len-1; i>=0; i--){
+    for(var j = 1; j<=i; j++){
+      if(arr[j-1].toLowerCase().localeCompare(arr[j].toLowerCase())>0){
+          var temp = arr[j-1];
+          arr[j-1] = arr[j];
+          arr[j] = temp;
+       }
+    }
+  }
+  return arr;
 
-
-function insensitive(s1, s2) {
-  var s1lower = s1.toLowerCase();
-  var s2lower = s2.toLowerCase();
-  return s1lower > s2lower? 1 : (s1lower < s2lower? -1 : 0);
 }
