@@ -7,7 +7,6 @@ function dictionary_sort(arr){
         var temp_value = arr[idx];
         arr[idx] = arr[idy];
         arr[idy] = temp_value;
-        idx = 0;
       }
     }
   }
