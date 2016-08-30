@@ -1,7 +1,3 @@
-function dictionary_sort(item) {
-  return item.sort();
-}
-
 function dictionary_sort2(item) {
   // Your code here to sort the array
   var len     = item.length,     // number of items in the array
@@ -28,26 +24,3 @@ function dictionary_sort2(item) {
 
   return item;
 }
-
-const readline = require('readline');
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-rl.setPrompt('Type another word : ')
-
-var inputText = new Array();
-
-console.log('type word: ')
-
-rl.on('line', (line) => {
-    inputText.push(line);
-    rl.prompt();
-
-}).on('close',() => {
-  console.log(inputText);
-  dictionary_sort(inputText);
-  console.log("Congratulation! You dictionary has : " + inputText.length + " word(s)" + '\n' +inputText );
-})
